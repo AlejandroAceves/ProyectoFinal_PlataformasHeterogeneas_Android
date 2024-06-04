@@ -1,6 +1,9 @@
 package com.example.heterogeneas_pf
 
 import android.os.Bundle
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Inicializa y configura el WebView
+        val webView: WebView = findViewById(R.id.webview)
+        val webSettings: WebSettings = webView.settings
+        webSettings.javaScriptEnabled = true
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("file:///android_asset/index.html")
     }
 }

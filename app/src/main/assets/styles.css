@@ -1,0 +1,102 @@
+body{
+    font-family: "Press Start 2P", system-ui;
+    color: #E0F6BA;
+    margin:0;
+    padding: 0;
+    background-color: #428489;
+}
+
+h1{
+    font-size: 2em
+}
+
+button{
+    font-family: "Press Start 2P", system-ui;
+    color: #DD9860;
+    border: none;
+    border-radius: 10px;
+}
+
+.btnBright{
+    background-color: #2E6982;
+}
+
+.btnDark{
+    background-color: #30505A;
+}
+
+.bigButton{
+    font-size: 2em;
+}
+
+.btnSubtitle{
+    font-size: 2em;
+}
+
+input{
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+
+
+.panel{
+    width: 100%;
+    height: 12%;
+}
+
+.panelMain{
+    background-color: #A2594C;
+}
+
+.panelRegister{
+    background-color: #8CB3BC;
+}
+
+
+
+
+.tblPanel{
+    position: relative;
+    top: 25%;
+    left: 5%;
+    width:90%;
+}
+
+.tdPanel {
+    white-space: nowrap;
+    width:auto;
+    text-align: center;
+}
+
+.tableForm {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.labelTitle{
+    font-size: 2em;
+    color: #E0F6BA;
+}
+
+.divProfile{
+    text-align: left;
+}
+
+.wrapper{
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divProfile {
+    text-align: left;
+}
+.buttons-container {
+    text-align: center;
+    margin-top: 10px;
+}

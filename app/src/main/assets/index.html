@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Zorro Go</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="config.js"></script>
+        <script src="util.js"></script>
+        <script src="forms.js"></script>
+        <script src="profileStructure.js"></script>
+        <script src="drawer.js"></script>
+        <script src="manageUILogin.js"></script>
+        <script src="register.js"></script>
+        <script src="edit.js"></script>
+        <script src="delete.js"></script>
+        <script src="login.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id = "panelMain" class="panel panelMain">
+            <table id="tblPanel" class="tblPanel">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td><h1>Zorro Go</h1></td>
+                        <td class="tdPanel">
+                            <button id="btnLogin" class="bigButton btnBright">Login</button>
+                            <button id="btnRegister" class="bigButton btnBright">Register</button>
+                            <button id="btnDownload" class="bigButton btnBright">Download</button>
+                            <button id="btnLogout" class="bigButton btnBright">Logout</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id = "wrapper" class="wrapper">
+            <table class="tableContent">
+                <thead></thead>
+                <tbody id="content"></tbody>
+            </table>
+        </div>
+    </body>
+</html>
