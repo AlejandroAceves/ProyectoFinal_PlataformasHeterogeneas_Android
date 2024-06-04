@@ -41,7 +41,7 @@ function deactivateLogin(){
     $("#wrapper").html('');
     $("#wrapper").html(
         '<br><br>'+
-        '<img src="./Assets/Preview.png" alt="Preview">'+
+        '<img src="./images/Preview.png" alt="Preview" class="hero">'+
         '<br><br>'+
         '<button id="btnDownload" class="bigButton btnBright">Download</button>'
     );

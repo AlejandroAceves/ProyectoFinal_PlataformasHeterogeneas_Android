@@ -1,45 +1,82 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Zorro Go</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <script src="config.js"></script>
-        <script src="util.js"></script>
-        <script src="forms.js"></script>
-        <script src="profileStructure.js"></script>
-        <script src="drawer.js"></script>
-        <script src="manageUILogin.js"></script>
-        <script src="register.js"></script>
-        <script src="edit.js"></script>
-        <script src="delete.js"></script>
-        <script src="login.js"></script>
-        <script src="main.js"></script>
-    </head>
-    <body>
-        <div id = "panelMain" class="panel panelMain">
-            <table id="tblPanel" class="tblPanel">
-                <thead></thead>
-                <tbody>
-                    <tr>
-                        <td><h1>Zorro Go</h1></td>
-                        <td class="tdPanel">
-                            <button id="btnLogin" class="bigButton btnBright">Login</button>
-                            <button id="btnRegister" class="bigButton btnBright">Register</button>
-                            <button id="btnDownload" class="bigButton btnBright">Download</button>
-                            <button id="btnLogout" class="bigButton btnBright">Logout</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/form.css" rel="stylesheet" />
+    <link href="./css//profile.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--dynamic page scripts-->
+    <script src="./scripts/config.js"></script>
+    <script src="./scripts/util.js"></script>
+    <script src="./scripts/templates.js"></script>
+    <script src="./scripts/profileStructure.js"></script>
+    <script src="./scripts/drawer.js"></script>
+    <script src="./scripts/manageUILogin.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/edit.js"></script>
+    <script src="./scripts/delete.js"></script>
+    <script src="./scripts/login.js"></script>
+    <!--loader script-->
+    <script src="./scripts/index.js"></script>
+
+
+  </head>
+
+  <body>
+    <header id="navbar">
+      <nav class="navbar-container tcontainer">
+        <h1>Zorro Go</h1>
+        <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu"
+          aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-links">
+            <li class="navbar-item"><button class="navbar-link button-bright" id="btnLogin">Login</button></li>
+            <li class="navbar-item"><button class="navbar-link button-bright" id="btnRegister">Register</button></li>
+            <li class="navbar-item"><button class="navbar-link button-bright" id="btnDownload">Download</button></li>
+            <li class="navbar-item"><button class="navbar-link button-bright" id="btnLogout">Logout</button></li>
+          </ul>
         </div>
-        <div id = "wrapper" class="wrapper">
-            <table class="tableContent">
-                <thead></thead>
-                <tbody id="content"></tbody>
-            </table>
-        </div>
-    </body>
+      </nav>
+    </header>
+    <!--Dynamic content-->
+    <div id="wrapper" class="wrapper">
+      <table class="tableContent">
+        <thead></thead>
+        <tbody id="content"></tbody>
+      </table>
+    </div>
+
+
+    <!--Navbar script-->
+    <script>
+      const navbarToggle = navbar.querySelector("#navbar-toggle");
+      const navbarMenu = document.querySelector("#navbar-menu");
+      const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+      let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+      const toggleNavbarVisibility = () => {
+        isNavbarExpanded = !isNavbarExpanded;
+        navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+      };
+
+      navbarToggle.addEventListener("click", toggleNavbarVisibility);
+      navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+      navbarMenu.addEventListener("click", toggleNavbarVisibility);
+
+      //collapse menu
+      $(".navbar-item button").on("click", () => {
+        isNavbarExpanded = false
+        navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+      })
+    </script>
+  </body>
 </html>

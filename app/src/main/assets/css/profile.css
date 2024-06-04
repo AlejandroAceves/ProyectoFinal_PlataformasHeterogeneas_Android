@@ -1,0 +1,28 @@
+.profile-container{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+ }
+
+ .profile-box{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+ }
+
+ .profile-img{
+    max-width: 80vw;
+ }
+
+ .profile-container .row{
+    word-wrap: break-word;
+    word-break: break-word;
+ }
+
+
+ .image-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+ }
