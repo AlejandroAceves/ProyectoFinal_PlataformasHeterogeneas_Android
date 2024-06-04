@@ -21,9 +21,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Inicializa y configura el WebView
-        val webView: WebView = findViewById(R.id.webview)
-        val webSettings: WebSettings = webView.settings
+        val webView = findViewById<WebView>(R.id.webview)
+        val webSettings = webView.settings
+
         webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
+        webSettings.loadsImagesAutomatically = true
+        webSettings.allowFileAccess = true
+        webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+        webSettings.allowUniversalAccessFromFileURLs = true
+        webSettings.allowFileAccessFromFileURLs = true
+
         webView.webViewClient = WebViewClient()
         webView.loadUrl("file:///android_asset/index.html")
     }

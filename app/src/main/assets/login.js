@@ -24,7 +24,7 @@ function getUser(id, callback){
     $("#wrapper").html('');
     $.ajax({
         method: 'GET',
-        url: "http://localhost:4444/user/find/"+id,
+        url: API_BASE_URL+"/user/find/"+id,
         dataType: 'JSON',
         contentType: 'application/json',
         success: function (user) {

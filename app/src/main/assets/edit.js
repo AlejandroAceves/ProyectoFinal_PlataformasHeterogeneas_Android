@@ -19,7 +19,7 @@ function editUser(id) {
             }
             $.ajax({
                 method: 'PUT',
-                url: "http://localhost:4444/user/update",
+                url: API_BASE_URL+"/user/update",
                 dataType: 'TEXT',
                 contentType: 'application/json',
                 data: JSON.stringify(infoUser),
