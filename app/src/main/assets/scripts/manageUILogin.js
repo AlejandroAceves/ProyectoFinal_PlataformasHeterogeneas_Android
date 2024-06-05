@@ -33,6 +33,7 @@ function activateLogin(user){
 }
 
 function deactivateLogin(){
+    console.log("deactivate")
     $("#btnRegister").show();
     $("#btnLogin").show();
     $("#panelRegister").hide();
@@ -43,9 +44,7 @@ function deactivateLogin(){
         '<br><br>'+
         '<img src="./images/Preview.png" alt="Preview" class="hero">'+
         '<br><br>'+
-        '<button id="btnDownload" class="bigButton btnBright">Download</button>'
+        '<button  onclick="window.location.href=\'https://github.com/PancakePanda94/ProyectoPlataformas\'" id="btnDownload" class="bigButton btnBright">Download</button>'
     );
-    $('#btnDownload').click(function () {
-        window.location.href='https://github.com/PancakePanda94/ProyectoPlataformas';
-    });
+    console.log("reg bdl");
 }
